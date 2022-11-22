@@ -1,0 +1,43 @@
+<%- include("plantilla/cabecera")%>
+<% if(user) { %>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-header" style="background-color: #6B757D; color: #fff;">
+            <h5>Editar Producto</h5>
+        </div>
+        <div class="card-body">       
+            <form action="/updateproducto" method="post">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="tipoL">Código</p>
+                        <input type="number" class="form-control" value="<%= user.id_prod %>" name="cod" tabindex="1" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="tipoL">Producto</p>
+                        <input type="text" class="form-control" value="<%= user.producto %>" name="nom" tabindex="2"><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="tipoL">Precio</p>
+                        <input type="number" class="form-control"  value="<%= user.precio %>"name="pre" tabindex="3">
+                    </div>
+                    <div class="col-md-6">
+                        <p class="tipoL">Stock</p>
+                        <input type="number" class="form-control" value="<%= user.stock %>" name="stock" tabindex="4"><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="/productos" class="btn btn-danger">Cancelar</a>
+                        <button type="submit" class="btn btn-primary" tabindex="6">Actualizar Producto</button>
+                    </div>
+                </div><br>
+            </form>
+        </div>
+    </div>
+</div>
+<% } %>
+<%- include("plantilla/footer")%>

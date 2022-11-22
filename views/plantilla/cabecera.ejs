@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Menú</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+
+<body>
+    <div class="container-fluid d-flex p-2 bg-cabecera">
+        <div class="container-fluid d-flex justify-content-start ml-4">
+            <div>
+                <img src="/icons/email.png" alt="email" class="mr-2"/>
+                publicidadRyR@gmail.com
+            </div>
+            
+            <div class="mx-5">
+                <img src="/icons/telephone-call.png" alt="telephone" class="mr-1"/>
+                (303) 555-0105
+            </div>   
+        </div> 
+        
+
+        <div class="container-fluid d-flex justify-content-end mr-4">
+            <div>
+                <a href="https://www.facebook.com/rodrigo.rodriguezpozo"><img src="/icons/facebook-app-symbol.png" alt="facebook" class="mr-1"/></a>
+                <a href="https://www.instagram.com/publicidadryr/?hl=es"><img src="/icons/instagram.png" alt="instagram" class="mr-1"/></a>
+                <a href="https://twitter.com/home?lang=es"><img src="/icons/twitter.png" alt="twitter" class="mr-1"/></a>
+                <a href="https://www.linkedin.com/feed/"><img src="/icons/linkedin-logo.png" alt="linkendin" class="mr-1"/></a>
+            </div>
+        </div> 
+    </div>
+    <nav class="navbar navbar-expand-md bg-white navbar-dark mb-4">
+        <a class="navbar-brand title ml-5" href="/">Publicidad RyR</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon bg-danger"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <!-- Dropdown -->
+                <li class="nav-item dropdown mr-2">
+                    <a class="nav-link dropdown-toggle nav-opcion" href="#" id="navbardrop" data-toggle="dropdown">
+                      Ventas
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item nav-opcion" href="/registrar">Registrar Venta</a>
+                        <a class="dropdown-item nav-opcion" href="/adminVenta">Administrar Venta</a>
+                    </div>
+                  </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link nav-opcion" href="/productos">Productos</a>
+                </li>
+                <li class="nav-item mr-4">
+                    <a class="nav-link btn-logout" href="/logout">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+
+
+</html>

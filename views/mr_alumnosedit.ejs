@@ -1,0 +1,43 @@
+<%- include("plantilla/mr_cabecera")%>
+<% if(user) { %>
+<div class="container mt-5">
+    <div class="card border-info">
+        <div class="card-header">
+            <h4>Editar Alumnos</h4>
+        </div>
+        <div class="card-body">
+            <form action="/updatealumnos" method="post">
+                <div class="mt-2">
+                    <label for="id">IdAutor</label>
+                    <input type="text" class="form-control" value="<%= user.IdAutor %>" name="cod" tabindex="1" readonly>
+                </div>
+                <div class="mt-2">
+                    <label for="ape">Apellidos</label>
+                    <input type="text" class="form-control" value="<%= user.Apellidos %>" name="ape" tabindex="2">
+                </div>
+                <div class="mt-2">
+                    <label for="nom">Nombres</label>
+                    <input type="text" class="form-control" value="<%= user.Nombres %>" name="nom" tabindex="3">
+                </div>
+                <div class="mt-2">
+                    <label for="dir">Dirección</label>
+                    <input type="text" class="form-control" value="<%= user.Direccion %>" name="dir" tabindex="4">
+                </div>
+                <div class="mt-2">
+                    <label for="telef">Teléfono</label>
+                    <input type="text" class="form-control" value="<%= user.Telefono %>" name="telef" tabindex="5">
+                </div>
+                <div class="mt-2">
+                    <label for="id_car">IdCarrera</label>
+                    <input type="text" class="form-control" value="<%= user.IdCarrera %>" name="cod_carrera" tabindex="6">
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary" tabindex="6">Actualizar Registro</button>
+                    <a href="/mr_alumnos" class="btn btn-warning">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<% } %>
+<%- include("plantilla/mr_footer")%>

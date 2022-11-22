@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@700&display=swap');
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 8.5em;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+.footer{
+    background-color: #383c44;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.bg{
+    background-color: #c1b0a0;
+}
+.title{
+    color: #f32c3a !important; 
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 150%;
+    font-family: 'Inter', sans-serif;
+}
+.bg-cabecera{
+    background-color: #f1f1f1;
+    border-bottom: 1px solid black;
+}
+.nav-opcion{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000 !important;
+}
+
+.btn-logout{
+    background-color: #f32c3a;
+    padding: 8px 20px;
+    color: #fff !important;
+}
+
+footer{
+    background-color: #fff;
+    border-top: 1px solid #e1e1e1;
+}
+
+.title-index{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 97px;
+    color: #000;
+}
+
+.logo{
+    font-family: 'Arima Madurai', cursive;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+}
+
+.img-login{
+    position: flex;
+    width: 720px;
+    height: 1024px;
+    top: 0px;
+    background: url(fotos/legos.jpg);
+}
+/*---------Productos--------------*/
+.title-rosa{
+    font-family: "Rubik Mono One";
+    color: #8B1578;
+    font-weight: 700;
+}
+.sud-til{
+    font-family: "Roboto";
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-indent: 1em;
+    background-color: #f32c3a;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 22px;
+}
+.tipoL{
+    font-family: "Roboto";
+    font-weight: 600;
+}
+.l{
+    font-family: "Roboto";
+    color: #fff;
+    font-weight: 500;
+}
+.table{
+    background-color: #fff;
+
+}
+.barra{
+    width: 32px;
+    height: 32px;
+    left: 57px;
+    top: 351px;
+    background: url(icons/barra.png);
+}
+.entrada{
+    box-sizing: border-box;
+    width: 725px;
+    height: 50px;
+    left: 57px;
+    top: 399px;
+    background: #FFFFFF;
+    border: 1px solid #9B9B9B;
+    border-radius: 8px;
+}
+.total_venta{
+    width: 353px;
+    height: 48px;
+    left: 52px;
+    top: 465px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 140%;
+    /* identical to box height, or 48px */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+.separador{
+    width: 40%;
+}

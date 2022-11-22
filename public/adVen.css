@@ -1,0 +1,30 @@
+.title-rosa{
+    font-family: "Rubik Mono One";
+    color: #8B1578;
+    font-weight: 700;
+}
+.cri{
+    color: #fff; 
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+.label{
+    font-family: "Roboto";
+    font-weight: 600;
+}
+.centrado{
+    display: flex; 
+    align-items: center;
+    justify-content: right
+}
+/*-----------Fecha------------------*/
+
+input:invalid + span::after {
+    content: "✘";
+    color: red;
+}
+input:valid + span::after {
+    content: "✔";
+}

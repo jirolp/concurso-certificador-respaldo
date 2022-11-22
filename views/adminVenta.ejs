@@ -1,0 +1,86 @@
+<%- include("plantilla/cabecera")%>
+
+<link href='https://fonts.googleapis.com/css?family=Rubik Mono One' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+
+<link rel="stylesheet" href="adVen.css">
+
+<div class="container">
+    <h3 align="center" class="title-rosa">ADMINISTRAR VENTAS</h3><br>
+    <div class="card">
+        <div class="card-header" style="background-color: #F32C3A;">
+            <h5 class="cri">CRITERIOS DE BUSQUEDA</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <h6 class="tipoL">Venta Desde:</h6>
+                    <input type="date" class="form-control" value="2022-11-20" id="FecIni" required>
+                    <span class="validity"></span>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="tipoL">Venta Hasta:</h6>
+                    <input type="date" class="form-control" value="2022-11-20" id="FecFin" required>
+                    <span class="validity"></span>
+                </div>
+                <div class="col-md-4 centrado">
+                    <button class="btn btn-primary"><img src="icons/lupa.png">Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 px-0">
+                <!-- <a href="./FormTik.html" class="btn btn-warning l"><img src="icons/btn-imprimir.png">  Imprimir</a> -->
+                <a href="javascript:window.print()" class="btn btn-warning l"><img src="icons/btn-imprimir.png">  Imprimir</a>
+            </div>
+            <div class="col-md-4 d-flex justify-content-end align-items-center px-0">
+                
+                    <h6>Buscar:</h6>
+                    <input type="text" class="form-control ml-3">
+                
+            </div>
+        </div>
+    </div><br>
+    <table class="table table-hover table-bordered text-center">
+        <thead style="background-color: #f32c3a; color: white;">
+            <tr>
+                <th>Boleta Nro</th>
+                <th>Codigo</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Importe Total</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% results.forEach((user)=>{%>
+                <tr>
+                    <td colspan="6" class="text-left p-1" style="background-color: #FFCFCF;">
+                        <a href="#" class="btn p-1"><img src="icons/delete.png" title="Eliminar detalle"></a>
+                        <a href="#" class="btn p-1"><img src="icons/edit.png" title="Editar detalle"></a>
+                        <i>
+                            <b>Boleta Nro:</b><%= user.id_boleta %> -
+                            <b>Cliente:</b> <%= user.nombre %> -
+                            <b>DNI:</b> <%= user.dni %> -
+                            <b>TotalPagal:</b> <%= user.total_pagar %>
+                        </i>
+                    </td>
+                </tr>
+                <tr>
+                    <td><%= user.id_boleta %></td>
+                    <td><%= user.id_prod %></td>
+                    <td><%= user.producto %></td>
+                    <td><%= user.cantidad %></td>
+                    <td><%= user.cantidad * user.precio%></td>
+                    <td><%= user.fecha %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+
+<%- include("plantilla/footer")%>

@@ -1,0 +1,104 @@
+<%- include("plantilla/cabecera")%>
+
+<link href='https://fonts.googleapis.com/css?family=Rubik Mono One' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<script src="../controllers/registrar_venta.js"></script>
+
+<div>
+    <h3 align="center" class="title-rosa">REGISTRAR VENTA</h3><br>
+</div>
+
+<div class="container-fluid d-flex align-items-center">
+    <div class="container-fluid">
+        <div class="px-0 ml-3">
+            <div class="row">
+                <div class="col-md-4 px-0">
+                    <h6 class="tipoL"> <img src="icons/barra.png" class="barra"> Productos:</h6>
+                    <select class="form-control campos mt-2" name="" tabindex="6" aria-placeholder="Elige producto">
+                        <% results.forEach((user)=>{%>
+                            <option>
+                                <%= user.producto %>
+                            </option>
+                        <% }) %>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid d-flex px-0 mb-2 mt-3">
+            <p class="total_venta m-0">Total Venta:</p>
+            <div class="container-fluid d-flex justify-content-end align-items-center px-0">
+                <a href="/ventaImprimir" class="btn btn-warning l"><img src="icons/btn-imprimir.png">      Imprimir Documento</a>
+            </div>
+        </div>
+        <table class="table table-hover text-center">
+            <thead style="background-color: #f32c3a; color: white;">
+                <tr>
+                    <th>Codigo</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="#" class=""><img src="icons/add.png" title="Aumentar cantidad"></a>
+                        <a href="#" class=""><img src="icons/remove.png" title="Disminuir cantidad"></a>
+                        <a href="#" class=""><img src="icons/delete1.png" title="Eliminar producto"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card ml-5 separador px-0 mr-3 mt-3">
+        <div class="card-header text-center" style="background-color: #f32c3a; color: #fff;">
+            <h5>TOTAL VENTA:</h5>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h6 class="tipoL">Cliente:</h6>
+                        <input type="text" class="form-control container-fluid" name="cliente">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6 mt-2">
+                        <h6 class="tipoL">DNI:</h6>
+                        <input type="number" class="form-control container-fluid mt-2" name="dni">
+                    </div>
+                    <div class="col-md-6 mt-2">
+                        <h6 class="tipoL">Fecha:</h6>
+                        <input type="date" class="form-control container-fluid mt-2" readonly name="fecha">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6 mt-2">
+                        <h6 class="tipoL">Serie:</h6>
+                        <input type="text" class="form-control container-fluid mt-2" value="B001" readonly>
+                    </div>
+                    <div class="col-md-6 mt-2">
+                        <h6 class="tipoL">Nro de venta:</h6>
+                        <input type="number" class="form-control container-fluid mt-2" readonly name="nro_venta">
+                    </div>
+                </div>
+                <div class="row mt-4 ml-1">
+                    <div class="col-md-4 px-0">
+                        <h6> SUBTOTAL:</h6>
+                        <h6 class="mt-2"> IGV(18%):</h6>
+                    </div>
+                </div>
+                <div class="row mt-4 mb-5 ml-1">
+                    <button type="submit" class="btn btn-primary" tabindex="6"> <img src="icons/rea_venta.png"> Realizar venta</button>
+                    <button class="btn btn-danger ml-5" id="btn_limpiar"><img src="icons/vac_listado.png"> Vaciar listado</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include("plantilla/footer")%>
